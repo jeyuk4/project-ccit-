@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    tools:context=".history">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1F1F1F"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Grafik Konsumsi Air -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"/>
+
+    <!-- Tombol Pilihan Bulan/Tahun -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btnMonth"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Month"
+            android:backgroundTint="#7E57C2"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnYear"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Year"
+            android:backgroundTint="#7E57C2"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <!-- Laporan Konsumsi Air -->
+    <TextView
+        android:id="@+id/tvWeeklyAvg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weekly average: 0 ml/day"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/tvMonthlyAvg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Monthly average: 0 ml/day"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/tvCompletion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Average completion: 0%"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"/>
+
+
+    <!-- Tombol Tambah Data -->
+    <Button
+        android:id="@+id/btnAddRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add record"
+        android:backgroundTint="#7E57C2"
+        android:textColor="#FFFFFF"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+</LinearLayout>
